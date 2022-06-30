@@ -19,3 +19,6 @@ https://recordit.co/7DPhuu2F7y
 
 # Note
 If you find yourself here, pull the code, follow the instructions to run, and give it a go.
+
+# Todo
+- Implement search filter via table methods
