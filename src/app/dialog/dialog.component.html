@@ -1,0 +1,80 @@
+<h1 mat-dialog-title>Add Customer Form</h1>
+
+<div class="mat-dialog-content">
+    <form [formGroup]="customerForm">
+        <mat-form-field appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input style="width: 100%;"
+                    matInput
+                    formControlName="firstName"
+                    [errorStateMatcher]="matcher"
+                    placeholder="ex. John">
+            <!-- <mat-error *ngIf="firstNameFormControl.hasError('required')">
+                Please enter a valid first name for the customer
+            </mat-error> -->
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input style="width: 100%;"
+                    matInput
+                    formControlName="lastName"
+                    [errorStateMatcher]="matcher"
+                    placeholder="ex. Seed">
+            <!-- <mat-error *ngIf="customerForm.lastName.hasError('required')">
+                Please enter a valid last name for the customer
+            </mat-error> -->
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Email Address</mat-label>
+            <input style="width: 100%;"
+                    matInput
+                    formControlName="email"
+                    [errorStateMatcher]="matcher"
+                    placeholder="ex. john.a.seed@email.com">
+            <mat-icon matSuffix>email</mat-icon>
+            <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+                Email address is required
+            </mat-error> -->
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Choose Access Rights</mat-label>
+            <mat-select formControlName="access" required>
+                <mat-option>--</mat-option>
+                <mat-option *ngFor="let access of roles" [value]="access">
+                    {{access.right}}
+                </mat-option>
+            </mat-select>
+            <!-- <mat-error *ngIf="accessFormControl.hasError('required')">
+                If you are unsure, choose Guest, and update the profile on a later date
+            </mat-error> -->
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Select today's date</mat-label>
+            <input formControlName="dateControl" matInput [matDatepicker]="picker">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Comment</mat-label>
+            <textarea matInput formControlName="comment"></textarea>
+        </mat-form-field>
+    </form>
+</div>
+
+<div mat-dialog-actions>
+    <button mat-raised-button
+            style="color: white; background-color: #28A745;"
+            (click)="addOrUpdateCustomer()">
+        {{buttonUsage}}
+    </button>
+    <span class="example-spacer"></span>
+    <button mat-raised-button
+            style="color: white; background-color: #DC3545;"
+            (click)="closeDialog()">
+        Close
+    </button>
+</div>

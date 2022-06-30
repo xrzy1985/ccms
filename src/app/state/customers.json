@@ -1,0 +1,64 @@
+{
+    "customers": [
+      {
+        "firstName": "James",
+        "lastName": "Patterson",
+        "email": "jamespatterson.feswe@yahoo.com",
+        "access": {
+          "right": "Customer"
+        },
+        "dateControl": "2022-06-28T00:41:15.103Z",
+        "comment": "James programmed this",
+        "id": 1
+      },
+      {
+        "firstName": "Nathan",
+        "lastName": "Curtis",
+        "email": "nathan@email.com",
+        "access": {
+          "right": "Customer"
+        },
+        "dateControl": "2022-06-28T00:41:15.103Z",
+        "comment": "Nathan Curtis - Owner",
+        "id": 2
+      },
+      {
+        "firstName": "Jean Claude",
+        "lastName": "Van Damm",
+        "email": "jean@email.com",
+        "access": {
+          "right": "Customer"
+        },
+        "dateControl": "2022-06-28T00:41:15.103Z",
+        "comment": "Is a bad ass",
+        "id": 3
+      },
+      {
+        "firstName": "Donald",
+        "lastName": "Trump",
+        "email": "don@pres.com",
+        "access": {
+          "right": "Customer"
+        },
+        "dateControl": "2022-06-28T04:00:00.000Z",
+        "comment": "FJB",
+        "id": 4
+      }
+    ],
+    "guests": [],
+    "admins": [
+      {
+        "id": 1,
+        "firstName": "Nathan",
+        "lastName": "Curtis",
+        "email": "nathan@email.com"
+      },
+      {
+        "id": 2,
+        "firstName": "James",
+        "lastName": "Patterson",
+        "email": "jamespatterson.feswe@yahoo.com"
+      }
+    ],
+    "orders": []
+  }
