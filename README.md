@@ -22,3 +22,4 @@ If you find yourself here, pull the code, follow the instructions to run, and gi
 
 # Todo
 - Implement search filter via table methods
+- Incorporate Firebase DB
